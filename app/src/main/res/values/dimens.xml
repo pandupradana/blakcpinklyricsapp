@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name ="button_width">64dp</dimen>
+    <dimen name ="button_height">64dp</dimen>
+
+    <dimen name ="horizontal_margin">10dp</dimen>
+    <dimen name ="vertical_margin">10dp</dimen>
+
+    <dimen name ="margin_start">0dp</dimen>
+    <dimen name ="margin_bottom">15dp</dimen>
+
+    <dimen name ="widthimagebutton">220dp</dimen>
+    <dimen name ="heightimagebutton">120dp</dimen>
+
+    <dimen name ="heightcardview">160dp</dimen>
+
+
+
+
+
+</resources>

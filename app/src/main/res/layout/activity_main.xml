@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/putihpink"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:paddingBottom="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppinsbold"
+                android:gravity="center"
+                android:text="BLACKPINK"
+                android:textColor="@color/blackmuda"
+                android:textSize="24sp">
+            </TextView>
+
+            <SearchView
+                android:layoutDirection="ltr"
+                android:queryHint="Mau cari lirik apa?"
+                android:id="@+id/search_view"
+                android:clickable="true"
+                android:focusableInTouchMode="true"
+                android:queryBackground="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rounded"
+                android:searchIcon="@drawable/ic_search_black_24dp">
+            </SearchView>
+
+            <androidx.cardview.widget.CardView
+                android:elevation="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="@dimen/button_height"
+                            android:background="@drawable/circlebutton"
+                            android:clickable="true"
+                            android:padding="5dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/circlejennie">
+                        </ImageButton>
+
+                        <TextView
+                            android:textColor="@color/blackmuda"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Jennie"
+                            android:gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="@dimen/button_height"
+                            android:background="@drawable/circlebutton"
+                            android:clickable="true"
+                            android:padding="5dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/circlelisa">
+                        </ImageButton>
+
+                        <TextView
+                            android:textColor="@color/blackmuda"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Lisa"
+                            android:gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="@dimen/button_height"
+                            android:background="@drawable/circlebutton"
+                            android:clickable="true"
+                            android:padding="5dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/circlejisoo">
+                        </ImageButton>
+
+                        <TextView
+                            android:textColor="@color/blackmuda"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Jisoo"
+                            android:gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="@dimen/button_height"
+                            android:background="@drawable/circlebutton"
+                            android:clickable="true"
+                            android:padding="5dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/circlerose">
+                        </ImageButton>
+
+                        <TextView
+                            android:textColor="@color/blackmuda"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Rose"
+                            android:gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heightcardview">
+
+                <ImageView
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_bp1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </ImageView>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp">
+
+                    <TextView
+                        android:text="Lyrics Song"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                <ImageView
+                    android:layout_marginStart="@dimen/margin_start"
+                    android:layout_marginBottom="@dimen/margin_bottom"
+                    android:src="@drawable/bp1"
+                    android:layout_gravity="bottom"
+                    android:layout_width="@dimen/widthimagebutton"
+                    android:layout_height="@dimen/heightimagebutton">
+
+                </ImageView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heightcardview">
+
+                <ImageView
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_bp1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </ImageView>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp">
+
+                    <TextView
+                        android:text="Wallpaper"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                    <ImageView
+                        android:paddingTop="20dp"
+                        android:layout_marginStart="@dimen/margin_start"
+                        android:layout_marginBottom="@dimen/margin_bottom"
+                        android:src="@drawable/bp2"
+                        android:layout_gravity="bottom"
+                        android:layout_width="@dimen/widthimagebutton"
+                        android:layout_height="@dimen/heightimagebutton">
+
+                    </ImageView>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heightcardview">
+
+                <ImageView
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_bp1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </ImageView>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp">
+
+                    <TextView
+                        android:text="Biography"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                    <ImageView
+                        android:paddingTop="0dp"
+                        android:layout_marginStart="@dimen/margin_start"
+                        android:layout_marginBottom="@dimen/margin_bottom"
+                        android:src="@drawable/bp3"
+                        android:layout_gravity="bottom"
+                        android:layout_width="@dimen/widthimagebutton"
+                        android:layout_height="@dimen/heightimagebutton">
+
+                    </ImageView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
