@@ -66,6 +66,7 @@
                         android:orientation="vertical">
 
                         <ImageButton
+                            android:id="@+id/imagejennie"
                             android:layout_width="@dimen/button_width"
                             android:layout_height="@dimen/button_height"
                             android:background="@drawable/circlebutton"
@@ -182,6 +183,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/CardView"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:layout_marginTop="16dp"

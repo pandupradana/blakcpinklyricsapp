@@ -1,9 +1,12 @@
 package com.project.blackpinklyrics;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.SearchView;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,5 +24,15 @@ public class MainActivity extends AppCompatActivity {
                 searchView.setIconified(false);
             }
         });
+
+        CardView cardView = (CardView) findViewById(R.id.CardView);
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Album.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
