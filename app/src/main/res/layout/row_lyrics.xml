@@ -5,49 +5,68 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardBackgroundColor="@color/white"
-    app:cardCornerRadius="3dp"
+    app:cardCornerRadius="4dp"
     app:cardElevation="3dp"
     app:cardUseCompatPadding="true"
     app:contentPadding="5dp">
 
     <LinearLayout
+        android:layout_gravity="center_vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="16dp">
+        android:padding="5dp">
 
         <ImageView
             android:id="@+id/song_image"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="10dp"
             android:src="@mipmap/ic_launcher" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:orientation="vertical">
 
             <TextView
-                android:fontFamily="@font/poppinsbold"
                 android:id="@+id/song_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+                android:fontFamily="@font/poppinsbold"
                 android:text="@string/title"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:fontFamily="@font/poppinsregular"
                 android:id="@+id/song_lyrics"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:maxLines="4"
+                android:fontFamily="@font/poppinsregular"
                 android:text="@string/lyrics"
                 android:textColor="@color/blackmuda"
-                android:textSize="14sp"
+                android:textSize="0sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/song_album"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:text="@string/lyrics"
+                android:textColor="@color/blackmuda"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/song_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:text="@string/lyrics"
+                android:textColor="@color/blackmuda"
+                android:textSize="0sp"
                 android:textStyle="bold" />
 
         </LinearLayout>

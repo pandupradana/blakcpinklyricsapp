@@ -3,6 +3,12 @@ package com.project.blackpinklyrics.model;
 
 public class ModelLyrics {
 
+    private String title;
+    private String lyrics;
+    private String date;
+    private String album;
+    private int image;
+
     public String getTitle() {
         return title;
     }
@@ -19,6 +25,22 @@ public class ModelLyrics {
         this.lyrics = lyrics;
     }
 
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getAlbum() {
+        return album;
+    }
+
+    public void setAlbum(String album) {
+        this.album = album;
+    }
+
     public int getImage() {
         return image;
     }
@@ -26,9 +48,4 @@ public class ModelLyrics {
     public void setImage(int image) {
         this.image = image;
     }
-
-    private String title;
-    private String lyrics;
-    private int image;
-
 }

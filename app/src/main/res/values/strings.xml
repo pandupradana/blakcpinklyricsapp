@@ -2,5 +2,8 @@
     <string name="app_name">Blackpink Lyrics</string>
     <string name="title">Title</string>
     <string name="lyrics">Lyrics</string>
+    <string name="blackpink">Blackpink</string>
+    <string name="album">album</string>
+    <string name="date">date</string>
 
 </resources>

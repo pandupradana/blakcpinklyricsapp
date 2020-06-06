@@ -16,6 +16,8 @@ public class ViewHolderLyrics extends RecyclerView.ViewHolder implements View.On
     public ImageView mImageView;
     public TextView mTitle;
     public TextView mLyrics;
+    public TextView mAlbum;
+    public TextView mDate;
     ItemClickListener itemClickListener;
 
 
@@ -25,6 +27,8 @@ public class ViewHolderLyrics extends RecyclerView.ViewHolder implements View.On
         this.mImageView = itemView.findViewById(R.id.song_image);
         this.mTitle = itemView.findViewById(R.id.song_title);
         this.mLyrics = itemView.findViewById(R.id.song_lyrics);
+        this.mAlbum = itemView.findViewById(R.id.song_album);
+        this.mDate = itemView.findViewById(R.id.song_date);
 
         itemView.setOnClickListener(this);
 

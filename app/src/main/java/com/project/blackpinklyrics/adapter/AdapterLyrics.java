@@ -35,8 +35,9 @@ public class AdapterLyrics extends RecyclerView.Adapter<ViewHolderLyrics> {
     @Override
     public ViewHolderLyrics onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
 
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_lyrics, null);
-
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_lyrics, null, false);
+        RecyclerView.LayoutParams lp = new RecyclerView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        view.setLayoutParams(lp);
         return new ViewHolderLyrics(view);
     }
 
@@ -45,6 +46,8 @@ public class AdapterLyrics extends RecyclerView.Adapter<ViewHolderLyrics> {
 
         holder.mTitle.setText(modelLyrics.get(position).getTitle());
         holder.mLyrics.setText(modelLyrics.get(position).getLyrics());
+        holder.mAlbum.setText(modelLyrics.get(position).getAlbum());
+        holder.mDate.setText(modelLyrics.get(position).getDate());
         holder.mImageView.setImageResource(modelLyrics.get(position).getImage());
 
         holder.setItemClickListener(new ItemClickListener() {
@@ -52,6 +55,8 @@ public class AdapterLyrics extends RecyclerView.Adapter<ViewHolderLyrics> {
             public void onItemClickListener(View v, int position) {
                 String gTitle = modelLyrics.get(position).getTitle();
                 String gLyrics = modelLyrics.get(position).getLyrics();
+                String gAlbum = modelLyrics.get(position).getAlbum();
+                String gDate = modelLyrics.get(position).getDate();
                 BitmapDrawable bitmapDrawable = (BitmapDrawable)holder.mImageView.getDrawable();
 
                 Bitmap bitmap = bitmapDrawable.getBitmap();
@@ -65,6 +70,8 @@ public class AdapterLyrics extends RecyclerView.Adapter<ViewHolderLyrics> {
                 Intent intent = new Intent (c, LyricsDetail.class);
                 intent.putExtra("title", gTitle);
                 intent.putExtra("lyrics", gLyrics);
+                intent.putExtra("album", gAlbum);
+                intent.putExtra("date", gDate);
                 intent.putExtra("image", bytes);
                 c.startActivity(intent);
             }

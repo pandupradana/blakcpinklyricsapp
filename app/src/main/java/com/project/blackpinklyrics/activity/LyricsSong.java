@@ -22,6 +22,7 @@ public class LyricsSong extends AppCompatActivity {
 
         mRecyclerView = findViewById(R.id.recycleView);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.setHasFixedSize(true);
 
         adapterLyrics = new AdapterLyrics(this, getListLyrics());
         mRecyclerView.setAdapter(adapterLyrics);
@@ -33,6 +34,8 @@ public class LyricsSong extends AppCompatActivity {
 
         ModelLyrics m = new ModelLyrics();
         m.setTitle("Kill This Love");
+        m.setDate("5 April 2019");
+        m.setAlbum("Kill This Love");
         m.setLyrics("[Intro: Jennie, Lisa]\n" +
                 "Yeah, yeah, yeah\n" +
                 "BLACKPINK IN YOUR AREA!\n" +
@@ -116,11 +119,13 @@ public class LyricsSong extends AppCompatActivity {
                 "Yeah, it's sad but true\n" +
                 "Gotta kill this love (Yeah! Yeah!)\n" +
                 "Gotta kill, let's kill this love!");
-        m.setImage(R.drawable.squareon);
+        m.setImage(R.drawable.killthislove);
         modelLyrics.add(m);
 
         m = new ModelLyrics();
         m.setTitle("Don’t Know What To Do");
+        m.setDate("5 April 2019");
+        m.setAlbum("Kill This Love");
         m.setLyrics("[Verse 1: Jennie, Lisa]\n" +
                 "Jamkkan nuga siganeul jom meomchwobwa\n" +
                 "Mwonga keuge eogeusnan geol nan neukkyeo\n" +
@@ -180,11 +185,13 @@ public class LyricsSong extends AppCompatActivity {
                 "Don’t know what to do without you\n" +
                 "Hachanheun igose hollo nama\n" +
                 "Geuryeobon ne gieogeun blue");
-        m.setImage(R.drawable.squareon);
+        m.setImage(R.drawable.killthislove);
         modelLyrics.add(m);
 
         m = new ModelLyrics();
         m.setTitle("DDU-DU DDU-DU");
+        m.setDate("15 June 2018");
+        m.setAlbum("Square Up");
         m.setLyrics("[Intro: All, Rosé]\n" +
                 "BLACKPINK!\n" +
                 "Ah yeah, ay yeah!\n" +
@@ -262,11 +269,13 @@ public class LyricsSong extends AppCompatActivity {
                 "\n" +
                 "[Outro: Jennie]\n" +
                 "Hit you with that ddu-du ddu-du du");
-        m.setImage(R.drawable.squareon);
+        m.setImage(R.drawable.squareup);
         modelLyrics.add(m);
 
         m = new ModelLyrics();
         m.setTitle("Forever Young");
+        m.setDate("15 June 2018");
+        m.setAlbum("Square Up");
         m.setLyrics("[Intro: Jennie]\n" +
                 "Tteonaji ma just stay\n" +
                 "Jigeum i siganeul meomchun chae\n" +
@@ -360,43 +369,556 @@ public class LyricsSong extends AppCompatActivity {
                 "Whatta bum bum whatta bum bum\n" +
                 "Whatta bum bum whatta bum bum\n" +
                 "Whatta bum bum whatta bum bum");
+        m.setImage(R.drawable.squareup);
+        modelLyrics.add(m);
+
+        m = new ModelLyrics();
+        m.setTitle("As If It's Your Last");
+        m.setDate("22 June 2017");
+        m.setAlbum("Blackpink");
+        m.setLyrics("[Intro: Jennie & Lisa]\n" +
+                "Little bit of that\n" +
+                "Little bit of this\n" +
+                "Little bit of that\n" +
+                "Gimme gimme gimme\n" +
+                "Gimme little bit of that\n" +
+                "\n" +
+                "[Verse 1: Jennie]\n" +
+                "Neo mwonde jakku saenggakna\n" +
+                "Jajonsim sanghae aega ta\n" +
+                "Eolguri tteugeobgo gaseumeun gyesok ttwieo\n" +
+                "Nae momi mamdaero andwae eojireowo\n" +
+                "\n" +
+                "[Verse 2: Jisoo]\n" +
+                "Neon han jumui morae gata\n" +
+                "Jabhil deut jabhiji anha\n" +
+                "Neon swibji anheun geol geuraeseo deo kkeullyeo\n" +
+                "Nae mami mamdaero andwae eoieopseo\n" +
+                "\n" +
+                "[Pre-Chorus: Rosé]\n" +
+                "Jigeum neoreul wonhaneun\n" +
+                "Nae sumgyeori neukkyeojini\n" +
+                "Neol barabogo isseodo\n" +
+                "Missing you\n" +
+                "Seotun nal won’t you set me free\n" +
+                "[Chorus: Jennie, Rosé]\n" +
+                "Baby nal teojil geotcheoreom anajwo\n" +
+                "Geuman saenggakhae mwoga geuri eoryeowo\n" +
+                "Geojitmalcheoreom kiss haejwo naega neoege\n" +
+                "Majimak sarangin geotcheoreom\n" +
+                "\n" +
+                "[Hook: Lisa]\n" +
+                "Majimakcheoreom ma-ma-majimakcheoreom\n" +
+                "Majimak bamin geotcheoreom love\n" +
+                "Majimakcheoreom ma-ma-majimakcheoreom\n" +
+                "Naeil ttawin eopsneun geotcheoreom\n" +
+                "\n" +
+                "[Verse 3: Lisa]\n" +
+                "Uh I'mma fall in love baby\n" +
+                "You gon' finna catch me\n" +
+                "Uh give you all of this baby\n" +
+                "Call me pretty and nasty\n" +
+                "Cause we gonna get it\n" +
+                "My love you can bet it on\n" +
+                "Black we gon double\n" +
+                "The stack on them whoa!\n" +
+                "I be the Bonnie and\n" +
+                "You be my Clyde\n" +
+                "We ride or die\n" +
+                "Xs and Os\n" +
+                "[Pre-Chorus: Jisoo]\n" +
+                "Siganeun heulleoganeunde\n" +
+                "Maeumman geuphaejiji\n" +
+                "Nae sesangeun neo hanaman\n" +
+                "Missing you\n" +
+                "Seotun nal won’t you set me free\n" +
+                "\n" +
+                "[Chorus: Rosé, Jennie]\n" +
+                "Baby nal teojil geotcheoreom anajwo\n" +
+                "Geuman saenggakhae mwoga geuri eoryeowo\n" +
+                "Geojitmalcheoreom kiss haejwo naega neoege\n" +
+                "Majimak sarangin geotcheoreom\n" +
+                "\n" +
+                "[Hook: Lisa]\n" +
+                "Majimakcheoreom ma-ma-majimakcheoreom\n" +
+                "Majimak bamin geotcheoreom love\n" +
+                "Majimakcheoreom ma-ma-majimakcheoreom\n" +
+                "Naeil ttawin eopsneun geotcheoreom\n" +
+                "\n" +
+                "[Bridge: Jennie, Rosé, Lisa]\n" +
+                "One two three\n" +
+                "Saeroun sijakiya\n" +
+                "Jeoldae dwidorabojin anheul geonikka\n" +
+                "Nal neoege deonjimyeon\n" +
+                "Neoneun nal kkok jabajwo\n" +
+                "Sesangeun uril kkeokkji moshal tenikka\n" +
+                "BLACKPINK in your area\n" +
+                "\n" +
+                "[Chorus: Jennie, Rosé]\n" +
+                "Baby nal teojil geotcheoreom anajwo\n" +
+                "Geuman saenggakhae mwoga geuri eoryeowo\n" +
+                "Geojitmalcheoreom kiss haejwo naega neoege\n" +
+                "Majimak sarangin geotcheoreom\n" +
+                "\n" +
+                "[Hook: Lisa]\n" +
+                "Majimakcheoreom ma-ma-majimakcheoreom\n" +
+                "Majimak bamin geotcheoreom love\n" +
+                "Majimakcheoreom ma-ma-majimakcheoreom\n" +
+                "Naeil ttawin eopsneun geotcheoreom");
+        m.setImage(R.drawable.asifityourlast);
+        modelLyrics.add(m);
+
+        m = new ModelLyrics();
+        m.setTitle("Boombayah");
+        m.setDate("8 August 2016");
+        m.setAlbum("Square One");
+        m.setLyrics("[Intro: Jennie]\n" +
+                "(Hot) BLACKPINK in your area\n" +
+                "(Hot) BLACKPINK in your area\n" +
+                "\n" +
+                "[Verse 1: Lisa]\n" +
+                "Been a bad girl, I know I am\n" +
+                "And I’m so hot, I need a fan\n" +
+                "I don’t want a boy, I need a man\n" +
+                "\n" +
+                "[Verse 2: Jennie]\n" +
+                "Click-clack Badda bing badda boom\n" +
+                "Muneul bakchamyeon modu nal barabom\n" +
+                "Gudi aesseo noryeok an haedo\n" +
+                "Modeun namjadeuleun kopiga pangpangpang\n" +
+                "Pangpang parapara pangpangpang\n" +
+                "Jigeum nal wihan chukbaereul jjanjjanjjan\n" +
+                "Hands up nae sonen bottle full o’ Henny\n" +
+                "Nega malloman deuddeon gyaega naya Jennie\n" +
+                "\n" +
+                "[Pre-Chorus 1: Jisoo & Lisa]\n" +
+                "Chumchuneun bulbicheun nal gamssago done\n" +
+                "Black to the pink eodiseodeun teukbyeolhae (Oh yes)\n" +
+                "Chyeoda bodeun maldeun I wanna dance\n" +
+                "Like ttaradaradanttan\n" +
+                "Ttaradaradanttan ttudurubbau\n" +
+                "[Pre-Chorus 2: Rosé & Jisoo]\n" +
+                "Joha i bunwigiga joha\n" +
+                "Joha nan jigeum nega joha\n" +
+                "Jeongmal banhaesseo oneul bam\n" +
+                "Neowa chumchugo sipeo\n" +
+                "\n" +
+                "[Chorus: All]\n" +
+                "BOOMBAYAH\n" +
+                "YAH YAH YAH BOOMBAYAH\n" +
+                "YAH YAH YAH BOOMBAYAH\n" +
+                "YAH YAH YAH YAH\n" +
+                "BOOM BOOM BA BOOM\n" +
+                "BOOM BA oppa!\n" +
+                "YAH YAH YAH YAH YAH YAH\n" +
+                "YAH YAH YAH YAH\n" +
+                "YAH YAH YAH YAH YAH YAH\n" +
+                "YAH YAH YAH YAH oppa!\n" +
+                "YAH YAH YAH YAH YAH YAH\n" +
+                "YAH YAH YAH YAH\n" +
+                "YAH YAH YAH YAH YAH YAH\n" +
+                "YAH BOOM BOOM BA\n" +
+                "BOOMBAYAH\n" +
+                "(Hot) (BLACKPINK in your area)\n" +
+                "\n" +
+                "[Verse 3: Lisa]\n" +
+                "Uh, Ije dallyeoyaji mwol eotteokhae\n" +
+                "Nan cheol eobseo geob eobseo Man\n" +
+                "Middle finger up, F U pay me\n" +
+                "90s baby, I pump up the jam\n" +
+                "Dallyeobwa dallyeobwa oppaya LAMBO\n" +
+                "Oneuleun neowa na jeolmeumeul GAMBLE\n" +
+                "Gamhi nal makjima hoksina nuga nal makado\n" +
+                "I’m gonna go brrrr, RAMBO\n" +
+                "[Pre-Chorus: Jisoo & Jennie]\n" +
+                "Ne soni nae heorireul gamssago done\n" +
+                "Front to my back\n" +
+                "Nae mommaeneun teukbyeolhae Oh yes\n" +
+                "Ne nunbicheun I know you wanna touch\n" +
+                "Like touch touch touch\n" +
+                "T-touch ttudurubbau\n" +
+                "\n" +
+                "[Pre-Chorus 2: Rosé & Jisoo]\n" +
+                "Joha i bunwigiga joha\n" +
+                "Joha nan jigeum nega joha\n" +
+                "Jeongmal meosisseo oneul bam\n" +
+                "Neowa chumchugo sipeo\n" +
+                "\n" +
+                "[Chorus: All]\n" +
+                "BOOMBAYAH\n" +
+                "YAH YAH YAH BOOMBAYAH\n" +
+                "YAH YAH YAH BOOMBAYAH\n" +
+                "YAH YAH YAH YAH\n" +
+                "BOOM BOOM BA\n" +
+                "BOOM BOOM BA oppa!\n" +
+                "YAH YAH YAH YAH YAH\n" +
+                "YAH YAH YAH YAH YAH\n" +
+                "YAH YAH YAH YAH YAH\n" +
+                "YAH YAH YAH YAH YAH oppa!\n" +
+                "YAH YAH YAH YAH YAH\n" +
+                "YAH YAH YAH YAH YAH\n" +
+                "YAH YAH YAH YAH YAH\n" +
+                "YAH YAH BOOM BOOM BA\n" +
+                "BOOMBAYAH\n" +
+                "[Outro: Rosé]\n" +
+                "Oneuleun maen jeongsin ttawin beorigo\n" +
+                "Haneuleul neomeoseo olla gal geoya\n" +
+                "Kkeuteul moreuge ppalli dalligo sipeo\n" +
+                "Let’s go, let’s go\n" +
+                "Oneuleun maen jeongsin ttawin beorigo\n" +
+                "Haneuleul neomeoseo olla gal geoya\n" +
+                "Kkeuteul moreuge ppalli dalligo sipeo\n" +
+                "Let’s go, let’s go");
         m.setImage(R.drawable.squareon);
         modelLyrics.add(m);
 
         m = new ModelLyrics();
-        m.setTitle("Don’t Know What To Do");
-        m.setLyrics("a");
+        m.setTitle("Whistle");
+        m.setDate("8 August 2016");
+        m.setAlbum("Square One");
+        m.setLyrics("[Intro]\n" +
+                "Hey boy\n" +
+                "\n" +
+                "[Hook]\n" +
+                "Make’ em whistle like a missile bomb, bomb\n" +
+                "Every time I show up, blow up, uh\n" +
+                "Make’ em whistle like a missile bomb, bomb\n" +
+                "Every time I show up, blow up, uh\n" +
+                "\n" +
+                "[Verse 1]\n" +
+                "Neon neomu areumdawo\n" +
+                "Neol ijeul suga eobseo\n" +
+                "Geu nunbichi ajik nareul\n" +
+                "Ireohge seollege hae Boom boom\n" +
+                "24/365 ojik neowa gachi hagopa\n" +
+                "Najedo i bamedo\n" +
+                "Ireohge neoreul wonhae Mmm... Mmm...\n" +
+                "\n" +
+                "[Verse 2]\n" +
+                "Modeun namjadeuli nal maeil Check out\n" +
+                "Daebubuni nal gajil su itda chakgak\n" +
+                "Jeoldae manheun geol wonchi\n" +
+                "Anha mameul wonhae nan\n" +
+                "Neon simjangeul doryeonae boyeobwa\n" +
+                "Aju ssikssikhage ttaeron Chic chic hage\n" +
+                "So hot so hot naega\n" +
+                "Eojjeol jul moreuge hae\n" +
+                "Najimaki bulleojwo\n" +
+                "Nae gwitgae doneun hwiparamcheoreom\n" +
+                "[Pre-Chorus]\n" +
+                "Idaero jinachiji mayo\n" +
+                "Neodo nacheoreom nal\n" +
+                "Ijeul suga eobtdamyeon Whoa\n" +
+                "Neol hyanghan i maeumeun Fire\n" +
+                "Nae simjangi ppareuge ttwijanha\n" +
+                "Jeomjeom gakkai deullijanha\n" +
+                "\n" +
+                "[Chorus]\n" +
+                "Hwiparam\n" +
+                "Uh, hwi param param param\n" +
+                "(Can you hear that?)\n" +
+                "Hwi parapara para bam\n" +
+                "Hwiparam\n" +
+                "Uh, hwi param param param\n" +
+                "(Can you hear that?)\n" +
+                "Hwi parapara para bam\n" +
+                "\n" +
+                "[Verse 4]\n" +
+                "Hold up\n" +
+                "Amu mal haji ma\n" +
+                "Just whistle to my heart\n" +
+                "Geu soriga jigeum nareul\n" +
+                "Ireohge seollege hae Boom boom\n" +
+                "Saenggakeun jiruhae\n" +
+                "Neukkimi Shhh\n" +
+                "Every day all day\n" +
+                "Nae gyeoteman issejwo Zoom zoom\n" +
+                "[Verse 5]\n" +
+                "Uh eonjena nan Stylin’\n" +
+                "Dodohajiman ne apeseon Darlin’\n" +
+                "Tteugeowojijanha Like a desert island\n" +
+                "Neo alagalsurok ullyeodaeneun maeumsok\n" +
+                "Geuman naeppae neomeowara\n" +
+                "Naege Boy ijen Checkmate\n" +
+                "Geimeun naega Win (Uh-huh)\n" +
+                "Nan neol taekhae anajwo deo\n" +
+                "Sege nuga neol garo\n" +
+                "Chae gagi jeone naega (Uh)\n" +
+                "\n" +
+                "[Pre-Chorus]\n" +
+                "Idaero jinachiji mayo\n" +
+                "Neodo nacheoreom nal\n" +
+                "Ijeul suga eobtdamyeon Whoa\n" +
+                "Neol hyanghan i maeumeun Fire\n" +
+                "Nae simjangi ppareuge ttwijanha\n" +
+                "Jeomjeom gakkai deullijanha\n" +
+                "\n" +
+                "[Chorus]\n" +
+                "Hwiparam\n" +
+                "Uh, hwi param param param\n" +
+                "(Can you hear that?)\n" +
+                "Hwi parapara para bam\n" +
+                "Hwiparam\n" +
+                "Uh, hwi param param param\n" +
+                "(Can you hear that?)\n" +
+                "Hwi parapara para bam\n" +
+                "This beat got me feelin’ like\n" +
+                "[Bridge]\n" +
+                "Baramcheoreom seuchyeoganeun\n" +
+                "Heunhan inyeoni anigil\n" +
+                "Manheun maleun pilyo eobseo\n" +
+                "Jigeum neoui gyeote\n" +
+                "Nareul deryeoga jwo\n" +
+                "\n" +
+                "[Hook]\n" +
+                "Make’ em whistle like a missile bomb, bomb\n" +
+                "Every time I show up, blow up, uh\n" +
+                "Make’ em whistle like a missile bomb, bomb\n" +
+                "Every time I show up, blow up, uh");
         m.setImage(R.drawable.squareon);
         modelLyrics.add(m);
 
         m = new ModelLyrics();
-        m.setTitle("Don’t Know What To Do");
-        m.setLyrics("d");
-        m.setImage(R.drawable.squareon);
+        m.setTitle("Playing With Fire");
+        m.setDate("1 November 2016");
+        m.setAlbum("Square Two");
+        m.setLyrics("[Verse 1: Jennie & Jisoo]\n" +
+                "Uri eomman maeil naege malhaesseo\n" +
+                "Eonjena namja joshimharago\n" +
+                "Sarangeun machi buljangnan gataseo\n" +
+                "Dachinikka eh\n" +
+                "Eomma mari kkok majeuljjido molla\n" +
+                "Neol bomyeon nae mami tteugeopge daraolla\n" +
+                "Duryeoumbodan neol hyanghan kkeullimi\n" +
+                "Deo keunikka eh\n" +
+                "\n" +
+                "[Pre-Chorus: Rosé & Lisa]\n" +
+                "Meomchul su eomneun i tteollimeun\n" +
+                "On and on and on\n" +
+                "Nae jeonbureul neoran sesange\n" +
+                "Da deonjigo shipeo\n" +
+                "Look at me look at me now\n" +
+                "Ireoke neon nal aetaeugo itjana\n" +
+                "Kkeul su eopseo\n" +
+                "Uri sarangeun buljangnan (oh-oh-oh-oh)\n" +
+                "\n" +
+                "[Chorus: Jennie, Lisa & Jisoo]\n" +
+                "My love is on fire\n" +
+                "Now burn baby burn\n" +
+                "Buljangnan (oh-oh-oh-oh)\n" +
+                "My love is on fire\n" +
+                "So don’t play with me boy\n" +
+                "Buljangnan\n" +
+                "[Verse 2: Lisa]\n" +
+                "Oh no nan imi meolli wabeoryeonneungeol\n" +
+                "Eoneusae i modeun ge jangnani anin geol\n" +
+                "Sarangiran ppalgan bulsshi\n" +
+                "Bureora baram deo keojeoganeun bulkkil\n" +
+                "Ige yaginji doginji uri eommado molla\n" +
+                "Nae mam doduginde wae gyeongchaldo molla\n" +
+                "Bul buteun nae shimjange deo bueora neoran gireum\n" +
+                "Kiss him will I diss him\n" +
+                "I don’t know but I miss him\n" +
+                "Jungdogeul neomeoseon i sarangeun crack\n" +
+                "Nae shimjange saekkareun black\n" +
+                "\n" +
+                "[Pre-Chorus: Jennie, Jisoo & Rosé]\n" +
+                "Meomchul su eomneun i tteollimeun\n" +
+                "On and on and on\n" +
+                "Nae jeonbureul neoran bulkkil sogeuro\n" +
+                "Deonjigo shipeo\n" +
+                "Look at me look at me now\n" +
+                "Ireoke neon nal aetaeugo itjana\n" +
+                "Kkeul su eopseo\n" +
+                "Uri sarangeun buljangnan (oh-oh-oh-oh)\n" +
+                "\n" +
+                "[Chorus: Rosé, Lisa & Jisoo]\n" +
+                "My love is on fire\n" +
+                "Now burn baby burn\n" +
+                "Buljangnan (oh-oh-oh-oh)\n" +
+                "My love is on fire\n" +
+                "So don’t play with me boy\n" +
+                "Buljangnan\n" +
+                "[Outro: Jennie & Rosé]\n" +
+                "Geotjabeul suga eomneun geol\n" +
+                "Neomuna ppalli peojeo ganeun i bulkkil\n" +
+                "Ireon nal meomchuji ma\n" +
+                "I sarangi oneul bameul taeweobeorige Woo");
+        m.setImage(R.drawable.squaretwo);
         modelLyrics.add(m);
 
         m = new ModelLyrics();
-        m.setTitle("Don’t Know What To Do");
-        m.setLyrics("f");
-        m.setImage(R.drawable.squareon);
+        m.setTitle("Stay");
+        m.setDate("1 November 2016");
+        m.setAlbum("Square Two");
+        m.setLyrics("[Verse 1: Rosé, Jennie]\n" +
+                "Tukhamyeon geochin maldeullo nae mame sangcheoreul naenohgo\n" +
+                "Mianhadan mal hanmadi eopsi tto na honja wirohago\n" +
+                "Oneul harudo hoksi nal tteonalkka neul buranhae hae\n" +
+                "I just want you to stay\n" +
+                "Jeomjeom mudyeojyeo ganeun neoui geu mupyojeong soge\n" +
+                "Cheoncheonhi naeryeonohjamyeo geoure soksagigon hae\n" +
+                "Nal dangyeonhage saenggakhaneun neojiman geuge neodawo\n" +
+                "Geuraedo stay stay stay with me\n" +
+                "\n" +
+                "[Pre-Chorus: Jisoo]\n" +
+                "Neol talmeun deushan seulpeun mellodi (oh)\n" +
+                "Ireohge nal ullineunde eh eh\n" +
+                "Ne hyanggineun dalkomhan felony (oh)\n" +
+                "Neomu mipjiman saranghae\n" +
+                "\n" +
+                "[Chorus: Rosé, Jisoo, Jennie]\n" +
+                "Eoduun bami nal gadugi jeone\n" +
+                "Nae gyeoteul tteonajima\n" +
+                "Ajik nal saranghani nae mamgwa gatdamyeon\n" +
+                "Oneureun tteonajima\n" +
+                "Gudi neoyeoyaman haneun iyuneun mutjima\n" +
+                "Geujeo nae gyeote stay with me\n" +
+                "\n" +
+                "[Post-Chorus: Lisa, All, Rosé]\n" +
+                "It goes a little something like\n" +
+                "La la la la la la la la la la la la la la la la la la\n" +
+                "La la la la la la la la la la la la la la la la la la\n" +
+                "Jigeum dangjang manheun geol baraneun ge anya\n" +
+                "Geujeo nae gyeote stay with me\n" +
+                "[Verse 2: Jennie, Lisa]\n" +
+                "Sasireun nan deo baraneun ge eopseo ije\n" +
+                "Simjangeun ttwigin haneun geonji mugamgakhae geurae\n" +
+                "Saramdeulgwaui eokjiseureon hanmadibodan\n" +
+                "Neowaui eosaekhan chimmugi charari joha\n" +
+                "So stay geuge eodiga dwaessgeon mariya\n" +
+                "Gakkeum eodumi ol ttaemyeon I’ll be your fire\n" +
+                "Geojit gateun sesang sok yuilhan truth it’t you\n" +
+                "This a letter from me to you\n" +
+                "\n" +
+                "[Pre-Chorus: Rosé]\n" +
+                "Neol talmeun deushan seulpeun mellodi (oh)\n" +
+                "Ireohge nal ullineunde eh eh\n" +
+                "Ne hyanggineun dalkomhan felony (oh)\n" +
+                "Neomu mipjiman saranghae\n" +
+                "\n" +
+                "[Chorus: Jisoo, Lisa, Jennie]\n" +
+                "Eoduun bami nal gadugi jeone\n" +
+                "Nae gyeoteul tteonajima\n" +
+                "Ajik nal saranghani nae mamgwa gatdamyeon\n" +
+                "Oneureun tteonajima\n" +
+                "Gudi neoyeoyaman haneun iyuneun mutjima\n" +
+                "Geujeo nae gyeote stay with me\n" +
+                "\n" +
+                "[Post-Chorus: Lisa, All, Jisoo, Rosé]\n" +
+                "It goes a little something like\n" +
+                "La la la la la la la la la la la la la la la la la la\n" +
+                "La la la la la la la la la la la la la la la la la la\n" +
+                "Jigeum dangjang manheun geol baraneun ge anya\n" +
+                "Geujeo nae gyeote stay with me\n" +
+                "It goes a little something like\n" +
+                "La la la la la la la la la la la la la la la la la la\n" +
+                "La la la la la la la la la la la la la la la la la la\n" +
+                "Jigeum dangjang manheun geol baraneun ge anya\n" +
+                "Geujeo nae gyeote stay with me");
+        m.setImage(R.drawable.squaretwo);
         modelLyrics.add(m);
 
         m = new ModelLyrics();
-        m.setTitle("Don’t Know What To Do");
-        m.setLyrics("g");
-        m.setImage(R.drawable.squareon);
-        modelLyrics.add(m);
-
-        m = new ModelLyrics();
-        m.setTitle("Don’t Know What To Do");
-        m.setLyrics("r");
-        m.setImage(R.drawable.squareon);
-        modelLyrics.add(m);
-
-        m = new ModelLyrics();
-        m.setTitle("Don’t Know What To Do");
-        m.setLyrics("g");
-        m.setImage(R.drawable.squareon);
+        m.setTitle("Kick It");
+        m.setDate("5 April 2019");
+        m.setAlbum("Kill This Love");
+        m.setLyrics("[Verse 1: Jennie, Lisa]\n" +
+                "Gyeolloni mwonde\n" +
+                "Tto geuraeseo\n" +
+                "Eojjeogessdaneun geonde\n" +
+                "I’ll break ya break ya heart\n" +
+                "Never asked for much\n" +
+                "Aesseo noryeok ttawin ma\n" +
+                "Swipge baeteun mal\n" +
+                "Juwo damjima\n" +
+                "I ain’t nothin’ like\n" +
+                "The same same girls that you’ve had\n" +
+                "Geurae nan meosdaero hae\n" +
+                "\n" +
+                "[Pre-Chorus: Rosé, Jisoo]\n" +
+                "Eoduun bami nal gamssajiman\n" +
+                "Ijeseoya nareul wihaeseo\n" +
+                "Chumeul chul su isseo\n" +
+                "Neoran byeogeul neomeoseo\n" +
+                "I’ll kick it if you’re down\n" +
+                "Kick it if you down\n" +
+                "\n" +
+                "[Chorus: Jennie, Lisa]\n" +
+                "Can I kick it? (Yeah)\n" +
+                "Kamkamhan jeo haneul wie\n" +
+                "Hanbatang nanrireul chimyeo bureul jireul geoya\n" +
+                "Can I kick it? (Yeah)\n" +
+                "Neoraneun sesangeul buswobeorigo\n" +
+                "Na hwanhage nunbusyeo beoril geoya\n" +
+                "[Post-Chorus: Rosé, Jisoo]\n" +
+                "And I’m letting it all out\n" +
+                "Ilheul geon eopsjanha\n" +
+                "Ijen nareul chajeul georago\n" +
+                "Na honjayeodo gwaenchanha\n" +
+                "Bulssanghaehaji ma\n" +
+                "Ijen neoreul ijeul georago\n" +
+                "\n" +
+                "[Verse 2: Lisa]\n" +
+                "Never needed nothin’ else\n" +
+                "Just a lil love from myself\n" +
+                "When you couldn’t be the one to help\n" +
+                "Had to kick it and I did it tell\n" +
+                "Whoever you wanna tell\n" +
+                "Get kicked to the curb, ya kicked out\n" +
+                "Never kick a girl when she kicked down\n" +
+                "Who you gon kiss now\n" +
+                "Know you gon miss how I move\n" +
+                "From the top\n" +
+                "To the bottom of my kicks now\n" +
+                "\n" +
+                "[Pre-Chorus: Jisoo & Rosé]\n" +
+                "Eoduun bami nal gamssajiman\n" +
+                "Ijeseoya nareul wihaeseo\n" +
+                "Chumeul chul su isseo\n" +
+                "Neoran byeogeul neomeoseo\n" +
+                "I’ll kick it if you’re down\n" +
+                "Kick it if you down\n" +
+                "[Chorus: Jennie, Lisa]\n" +
+                "Can I kick it? (Yeah)\n" +
+                "Kamkamhan jeo haneul wie\n" +
+                "Hanbatang nanrireul chimyeo bureul jireul geoya\n" +
+                "Can I kick it? (Yeah)\n" +
+                "Neoraneun sesangeul buswobeorigo\n" +
+                "Na hwanhage nunbusyeo beoril geoya\n" +
+                "\n" +
+                "[Post-Chorus: Rosé, Jisoo]\n" +
+                "And I’m letting it all out\n" +
+                "Ilheul geon eopsjanha\n" +
+                "Ijen nareul chajeul georago\n" +
+                "Na honjayeodo gwaenchanha\n" +
+                "Bulssanghaehaji ma\n" +
+                "Ijen neoreul ijeul georago\n" +
+                "\n" +
+                "[Bridge: Jennie]\n" +
+                "Gyeolloni mwonde\n" +
+                "Tto geuraeseo\n" +
+                "Eojjeogessdaneun geonde\n" +
+                "Dapdaphan neoui sesangeseo beoseona\n" +
+                "Nopi naragal tenikka\n" +
+                "\n" +
+                "[Outro]\n" +
+                "I’ll kick it how I wanna kick it\n" +
+                "When I wanna kick it\n" +
+                "No, you can’t tell me not to kick it\n" +
+                "Cause I’m bout to kick it\n" +
+                "I’ll kick it how I wanna kick it\n" +
+                "When I wanna kick it\n" +
+                "No, you can’t tell me not to kick it\n" +
+                "Cause I’m bout to kick it\n" +
+                "[Outro 2: Rosé, Jisoo]\n" +
+                "And I’m letting it all out\n" +
+                "Ilheul geon eopsjanha\n" +
+                "Ijen nareul chajeul georago\n" +
+                "Na honjayeodo gwaenchanha\n" +
+                "Bulssanghaehaji ma\n" +
+                "Ijen neoreul ijeul georago");
+        m.setImage(R.drawable.killthislove);
         modelLyrics.add(m);
 
 
