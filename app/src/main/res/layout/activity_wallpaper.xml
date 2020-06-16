@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#4a4a4a"
+    android:id="@+id/theme_preview"
+    tools:context=".wallpaper.Wallpaper">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|bottom">
+
+        <Button
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:fontFamily="@font/poppinsbold"
+            android:background="@drawable/buttonmenu"
+            android:textColor="@color/blackmuda"
+            android:textAllCaps="false"
+            android:padding="20dp"
+            android:id="@+id/btn_save"
+            android:text="Jadikan Wallpaper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,9 +1,19 @@
 package com.project.blackpinklyrics.activity;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.MenuItemCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.SearchView;
+
+
+
 import com.project.blackpinklyrics.R;
 import com.project.blackpinklyrics.adapter.AdapterLyrics;
 import com.project.blackpinklyrics.model.ModelLyrics;
@@ -15,10 +25,16 @@ public class LyricsSong extends AppCompatActivity {
     RecyclerView mRecyclerView;
     AdapterLyrics adapterLyrics;
 
+    private Toolbar mToolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lyrics_song);
+
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+        mToolbar.setTitle("Lyrics Song");
 
         mRecyclerView = findViewById(R.id.recycleView);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -26,6 +42,7 @@ public class LyricsSong extends AppCompatActivity {
 
         adapterLyrics = new AdapterLyrics(this, getListLyrics());
         mRecyclerView.setAdapter(adapterLyrics);
+
     }
 
     private ArrayList<ModelLyrics> getListLyrics() {
@@ -921,14 +938,40 @@ public class LyricsSong extends AppCompatActivity {
         m.setImage(R.drawable.killthislove);
         modelLyrics.add(m);
 
-
         return modelLyrics;
-
-
 
 
     }
 
 
+    @Override
+    public boolean onCreateOptionsMenu (Menu menu){
+
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.menu, menu);
+
+        MenuItem item = menu.findItem(R.id.search);
+
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(item);
+        searchView.setIconified(false);
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+
+                adapterLyrics.getFilter().filter(query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adapterLyrics.getFilter().filter(newText);
+                return false;
+            }
+        });
+
+        return true;
+
+    }
 
 }

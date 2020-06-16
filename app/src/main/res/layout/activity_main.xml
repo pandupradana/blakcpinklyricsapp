@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/putihpink"
+    style="@style/Theme.Design.NoActionBar"
     tools:context=".MainActivity">
 
     <ScrollView
@@ -31,6 +32,7 @@
                 android:textSize="24sp">
             </TextView>
 
+            <!--
             <SearchView
                 android:layoutDirection="ltr"
                 android:queryHint="Mau cari lirik apa?"
@@ -44,6 +46,8 @@
                 android:background="@drawable/rounded"
                 android:searchIcon="@drawable/ic_search_black_24dp">
             </SearchView>
+            -->
+
 
             <androidx.cardview.widget.CardView
                 android:elevation="0dp"
@@ -97,6 +101,7 @@
                         android:orientation="vertical">
 
                         <ImageButton
+                            android:id="@+id/imagelisa"
                             android:layout_width="@dimen/button_width"
                             android:layout_height="@dimen/button_height"
                             android:background="@drawable/circlebutton"
@@ -127,6 +132,7 @@
                         android:orientation="vertical">
 
                         <ImageButton
+                            android:id="@+id/imagejisoo"
                             android:layout_width="@dimen/button_width"
                             android:layout_height="@dimen/button_height"
                             android:background="@drawable/circlebutton"
@@ -155,6 +161,7 @@
                         android:orientation="vertical">
 
                         <ImageButton
+                            android:id="@+id/imagerose"
                             android:layout_width="@dimen/button_width"
                             android:layout_height="@dimen/button_height"
                             android:background="@drawable/circlebutton"
@@ -230,6 +237,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/CardView1"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:layout_marginTop="16dp"
@@ -250,7 +258,7 @@
                     android:layout_height="180dp">
 
                     <TextView
-                        android:text="Wallpaper"
+                        android:text="Biography"
                         android:fontFamily="@font/poppinssemibold"
                         android:textColor="@color/white"
                         android:textSize="14sp"
@@ -278,6 +286,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/CardView2"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:layout_marginTop="16dp"
@@ -298,7 +307,7 @@
                     android:layout_height="180dp">
 
                     <TextView
-                        android:text="Biography"
+                        android:text="About Us"
                         android:fontFamily="@font/poppinssemibold"
                         android:textColor="@color/white"
                         android:textSize="14sp"

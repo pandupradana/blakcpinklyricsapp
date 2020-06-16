@@ -7,10 +7,13 @@ import android.graphics.drawable.BitmapDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.project.blackpinklyrics.CustomFilter;
 import com.project.blackpinklyrics.ItemClickListener;
 import com.project.blackpinklyrics.R;
 import com.project.blackpinklyrics.activity.LyricsDetail;
@@ -21,14 +24,16 @@ import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 
 
-public class AdapterLyrics extends RecyclerView.Adapter<ViewHolderLyrics> {
+public class AdapterLyrics extends RecyclerView.Adapter<ViewHolderLyrics> implements Filterable {
 
     Context c;
-    ArrayList<ModelLyrics> modelLyrics;
+    public ArrayList<ModelLyrics> modelLyrics, filterList;
+    CustomFilter filter;
 
     public AdapterLyrics(Context c, ArrayList<ModelLyrics> modelLyrics) {
         this.c = c;
         this.modelLyrics = modelLyrics;
+        this.filterList = modelLyrics;
     }
 
     @NonNull
@@ -83,5 +88,15 @@ public class AdapterLyrics extends RecyclerView.Adapter<ViewHolderLyrics> {
     @Override
     public int getItemCount() {
         return modelLyrics.size();
+    }
+
+    @Override
+    public Filter getFilter() {
+
+        if (filter == null){
+            filter = new CustomFilter(filterList, this);
+        }
+
+        return filter;
     }
 }
