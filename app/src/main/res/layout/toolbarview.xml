@@ -6,6 +6,8 @@
     android:id="@+id/toolbar"
     android:background="@color/pinkmuda"
     android:minHeight="?attr/actionBarSize"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
     >
 
 </androidx.appcompat.widget.Toolbar>
