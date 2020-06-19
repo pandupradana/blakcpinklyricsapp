@@ -6,6 +6,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -13,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AutoCompleteTextView;
+import android.widget.ImageView;
 import android.widget.SearchView;
 
 
@@ -143,7 +147,7 @@ public class LyricsSong extends AppCompatActivity {
                 "Yeah, it's sad but true\n" +
                 "Gotta kill this love (Yeah! Yeah!)\n" +
                 "Gotta kill, let's kill this love!");
-        m.setImage(R.drawable.killthislove);
+        m.setImage(R.drawable.img_killthislove);
         modelLyrics.add(m);
 
         m = new ModelLyrics();
@@ -209,7 +213,7 @@ public class LyricsSong extends AppCompatActivity {
                 "Don’t know what to do without you\n" +
                 "Hachanheun igose hollo nama\n" +
                 "Geuryeobon ne gieogeun blue");
-        m.setImage(R.drawable.killthislove);
+        m.setImage(R.drawable.img_killthislove);
         modelLyrics.add(m);
 
         m = new ModelLyrics();
@@ -311,7 +315,7 @@ public class LyricsSong extends AppCompatActivity {
                 "Na honjayeodo gwaenchanha\n" +
                 "Bulssanghaehaji ma\n" +
                 "Ijen neoreul ijeul georago");
-        m.setImage(R.drawable.killthislove);
+        m.setImage(R.drawable.img_killthislove);
         modelLyrics.add(m);
 
         m = new ModelLyrics();
@@ -370,7 +374,7 @@ public class LyricsSong extends AppCompatActivity {
                 "But you nega wonhan sarang\n" +
                 "Naboda naeun saram manna haengbokhae\n" +
                 "Nal ijeul mankeum maneun anigil");
-        m.setImage(R.drawable.killthislove);
+        m.setImage(R.drawable.img_killthislove);
         modelLyrics.add(m);
 
         m = new ModelLyrics();
@@ -454,7 +458,7 @@ public class LyricsSong extends AppCompatActivity {
                 "\n" +
                 "[Outro: Jennie]\n" +
                 "Hit you with that ddu-du ddu-du du");
-        m.setImage(R.drawable.squareup);
+        m.setImage(R.drawable.img_squareone);
         modelLyrics.add(m);
 
         m = new ModelLyrics();
@@ -554,7 +558,7 @@ public class LyricsSong extends AppCompatActivity {
                 "Whatta bum bum whatta bum bum\n" +
                 "Whatta bum bum whatta bum bum\n" +
                 "Whatta bum bum whatta bum bum");
-        m.setImage(R.drawable.squareup);
+        m.setImage(R.drawable.img_squaretwo);
         modelLyrics.add(m);
 
         m = new ModelLyrics();
@@ -646,7 +650,7 @@ public class LyricsSong extends AppCompatActivity {
                 "See u later boy see u later later\n" +
                 "See u later boy see u later\n" +
                 "See u later maybe never");
-        m.setImage(R.drawable.squareup);
+        m.setImage(R.drawable.img_squareone);
         modelLyrics.add(m);
 
         m = new ModelLyrics();
@@ -722,7 +726,7 @@ public class LyricsSong extends AppCompatActivity {
                 "Really really really\n" +
                 "I gotta know that you’re for real\n" +
                 "Really really really");
-        m.setImage(R.drawable.squareup);
+        m.setImage(R.drawable.img_squareone);
         modelLyrics.add(m);
 
         m = new ModelLyrics();
@@ -818,7 +822,7 @@ public class LyricsSong extends AppCompatActivity {
                 "Majimak bamin geotcheoreom love\n" +
                 "Majimakcheoreom ma-ma-majimakcheoreom\n" +
                 "Naeil ttawin eopsneun geotcheoreom");
-        m.setImage(R.drawable.asifityourlast);
+        m.setImage(R.drawable.img_asifityourlast);
         modelLyrics.add(m);
 
         m = new ModelLyrics();
@@ -922,7 +926,7 @@ public class LyricsSong extends AppCompatActivity {
                 "Haneuleul neomeoseo olla gal geoya\n" +
                 "Kkeuteul moreuge ppalli dalligo sipeo\n" +
                 "Let’s go, let’s go");
-        m.setImage(R.drawable.squareon);
+        m.setImage(R.drawable.img_squareone);
         modelLyrics.add(m);
 
         m = new ModelLyrics();
@@ -1028,7 +1032,7 @@ public class LyricsSong extends AppCompatActivity {
                 "Every time I show up, blow up, uh\n" +
                 "Make’ em whistle like a missile bomb, bomb\n" +
                 "Every time I show up, blow up, uh");
-        m.setImage(R.drawable.squareon);
+        m.setImage(R.drawable.img_squareone);
         modelLyrics.add(m);
 
         m = new ModelLyrics();
@@ -1097,7 +1101,7 @@ public class LyricsSong extends AppCompatActivity {
                 "Neomuna ppalli peojeo ganeun i bulkkil\n" +
                 "Ireon nal meomchuji ma\n" +
                 "I sarangi oneul bameul taeweobeorige Woo");
-        m.setImage(R.drawable.squaretwo);
+        m.setImage(R.drawable.img_squaretwo);
         modelLyrics.add(m);
 
         m = new ModelLyrics();
@@ -1169,7 +1173,7 @@ public class LyricsSong extends AppCompatActivity {
                 "La la la la la la la la la la la la la la la la la la\n" +
                 "Jigeum dangjang manheun geol baraneun ge anya\n" +
                 "Geujeo nae gyeote stay with me");
-        m.setImage(R.drawable.squaretwo);
+        m.setImage(R.drawable.img_squaretwo);
         modelLyrics.add(m);
 
         m = new ModelLyrics();
@@ -1259,7 +1263,7 @@ public class LyricsSong extends AppCompatActivity {
                 "Love you like a brother\n" +
                 "Treat you like a friend\n" +
                 "Respect you like a lover\n");
-        m.setImage(R.drawable.surething);
+        m.setImage(R.drawable.img_surething);
         modelLyrics.add(m);
 
         m = new ModelLyrics();
@@ -1326,7 +1330,7 @@ public class LyricsSong extends AppCompatActivity {
                 "I'm so cool\n" +
                 "Nan neomu meotjyeo\n" +
                 "I'm so so so hot hot");
-        m.setImage(R.drawable.sohot);
+        m.setImage(R.drawable.img_sohot);
         modelLyrics.add(m);
 
 
@@ -1343,10 +1347,41 @@ public class LyricsSong extends AppCompatActivity {
         menuInflater.inflate(R.menu.menu, menu);
 
         MenuItem item = menu.findItem(R.id.search);
+        item.expandActionView();
+
+        item.setOnActionExpandListener(new MenuItem.OnActionExpandListener() {
+            @Override
+            public boolean onMenuItemActionExpand(MenuItem item) {
+
+                return true;
+
+            }
+
+            @Override
+            public boolean onMenuItemActionCollapse(MenuItem item) {
+                return false;
+            }
+        });
 
 
         final SearchView searchView = (SearchView) MenuItemCompat.getActionView(item);
+        //View v = searchView.findViewById(androidx.appcompat.R.id.search_plate);
+        //v.setBackgroundColor(Color.parseColor("#FFF99CAC"));
+
+        //ImageView searchCloseIcon = (ImageView)searchView.findViewById(androidx.appcompat.R.id.search_close_btn);
+        //searchCloseIcon.setImageResource(R.drawable.ic_baseline_close_24);
+
+        //ImageView voiceIcon = (ImageView)searchView.findViewById(androidx.appcompat.R.id.search_voice_btn);
+        //voiceIcon.setImageResource(R.drawable.abc_ic_voice_search);
+
+        //ImageView searchIcon = (ImageView)searchView.findViewById(androidx.appcompat.R.id.search_mag_icon);
+        //searchIcon.setImageResource(R.drawable.ic_search_black_24dp);
+
+
         searchView.setQueryHint("Search Lyrics");
+        searchView.setIconifiedByDefault(false);
+
+
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
