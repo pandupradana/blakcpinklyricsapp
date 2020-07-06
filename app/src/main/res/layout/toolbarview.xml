@@ -8,6 +8,7 @@
     android:minHeight="?attr/actionBarSize"
     android:clickable="true"
     android:focusableInTouchMode="true"
+    app:contentInsetStartWithNavigation="0dp"
     >
 
 </androidx.appcompat.widget.Toolbar>

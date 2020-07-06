@@ -41,6 +41,13 @@ public class LyricsSong extends AppCompatActivity {
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
+        mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         mToolbar.setTitle("Lyrics Song");
 
         mRecyclerView = findViewById(R.id.recycleView);
@@ -1347,9 +1354,9 @@ public class LyricsSong extends AppCompatActivity {
         menuInflater.inflate(R.menu.menu, menu);
 
         MenuItem item = menu.findItem(R.id.search);
-        item.expandActionView();
+        //item.expandActionView();
 
-        item.setOnActionExpandListener(new MenuItem.OnActionExpandListener() {
+        /**item.setOnActionExpandListener(new MenuItem.OnActionExpandListener() {
             @Override
             public boolean onMenuItemActionExpand(MenuItem item) {
 
@@ -1359,12 +1366,15 @@ public class LyricsSong extends AppCompatActivity {
 
             @Override
             public boolean onMenuItemActionCollapse(MenuItem item) {
-                return false;
+
+                return true;
             }
         });
+         **/
 
 
         final SearchView searchView = (SearchView) MenuItemCompat.getActionView(item);
+
         //View v = searchView.findViewById(androidx.appcompat.R.id.search_plate);
         //v.setBackgroundColor(Color.parseColor("#FFF99CAC"));
 
@@ -1377,9 +1387,10 @@ public class LyricsSong extends AppCompatActivity {
         //ImageView searchIcon = (ImageView)searchView.findViewById(androidx.appcompat.R.id.search_mag_icon);
         //searchIcon.setImageResource(R.drawable.ic_search_black_24dp);
 
-
         searchView.setQueryHint("Search Lyrics");
         searchView.setIconifiedByDefault(false);
+        searchView.setMaxWidth(Integer.MAX_VALUE);
+
 
 
 
