@@ -7,31 +7,13 @@
     android:layout_height="match_parent"
     tools:context=".About">
 
-    <ImageView
-        android:layout_marginTop="50dp"
-        android:layout_gravity="center"
-        android:scaleType="centerCrop"
-        android:src="@drawable/pasfoto"
-        android:layout_width="150dp"
-        android:layout_height="170dp">
-    </ImageView>
-
     <TextView
         android:layout_marginTop="30dp"
         android:textAlignment="center"
         android:textSize="16sp"
         android:fontFamily="@font/poppinsbold"
         android:textColor="@color/black"
-        android:text="Pandu Pradana Putra"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </TextView>
-    <TextView
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:fontFamily="@font/poppinsbold"
-        android:textColor="@color/black"
-        android:text="Pandupradana50@gmail.com"
+        android:text="Made by Dadi Developer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </TextView>

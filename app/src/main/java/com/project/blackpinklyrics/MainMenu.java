@@ -7,24 +7,27 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.SearchView;
 
 import com.project.blackpinklyrics.activity.LyricsSong;
-import com.project.blackpinklyrics.wallpaper.Wallpaper;
+import com.project.blackpinklyrics.game.MainActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainMenu extends AppCompatActivity {
 
     ImageButton btn_1, btn_2, btn_3, btn_4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_menu);
+
+        /** --BUTTON PROFILE--
 
         btn_1 = (ImageButton) findViewById(R.id.imagejennie);
         btn_2 = (ImageButton) findViewById(R.id.imagelisa);
         btn_3 = (ImageButton) findViewById(R.id.imagejisoo);
         btn_4 = (ImageButton) findViewById(R.id.imagerose);
+
+
 
 
 
@@ -78,6 +81,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+         **/
+
         /**final SearchView searchView = (SearchView) findViewById(R.id.search_view);
         searchView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LyricsSong.class);
+                Intent intent = new Intent(MainMenu.this, LyricsSong.class);
                 startActivity(intent);
             }
         });
@@ -101,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
         cardView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Biography.class);
+                Intent intent = new Intent(MainMenu.this, MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -110,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
         cardView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, About.class);
+                Intent intent = new Intent(MainMenu.this, About.class);
                 startActivity(intent);
             }
         });

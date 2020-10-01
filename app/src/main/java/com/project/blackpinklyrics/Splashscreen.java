@@ -22,7 +22,7 @@ public class Splashscreen extends AppCompatActivity {
                 @Override
                 public void run() {
 
-                    Intent home=new Intent(Splashscreen.this, MainActivity.class);
+                    Intent home=new Intent(Splashscreen.this, MainMenu.class);
                     startActivity(home);
                     finish();
                 }

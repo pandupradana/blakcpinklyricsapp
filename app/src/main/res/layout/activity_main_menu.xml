@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/putihpink"
     style="@style/Theme.Design.NoActionBar"
-    tools:context=".MainActivity">
+    tools:context=".MainMenu">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -27,7 +27,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/poppinsbold"
                 android:gravity="center"
-                android:text="BLACKPINK"
+                android:text="BLACKPINK LYRICS"
                 android:textColor="@color/blackmuda"
                 android:textSize="24sp">
             </TextView>
@@ -48,6 +48,8 @@
             </SearchView>
             -->
 
+
+          <!-- CARDVIEW PROFILE
 
             <androidx.cardview.widget.CardView
                 android:elevation="0dp"
@@ -188,6 +190,8 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
+            -->
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/CardView"

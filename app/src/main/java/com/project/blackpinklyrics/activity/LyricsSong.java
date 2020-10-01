@@ -20,7 +20,7 @@ import android.widget.ImageView;
 import android.widget.SearchView;
 
 
-
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.project.blackpinklyrics.R;
 import com.project.blackpinklyrics.adapter.AdapterLyrics;
 import com.project.blackpinklyrics.model.ModelLyrics;
@@ -33,11 +33,13 @@ public class LyricsSong extends AppCompatActivity {
     AdapterLyrics adapterLyrics;
 
     private Toolbar mToolbar;
+    private FirebaseAnalytics mFirebaseAnalytics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lyrics_song);
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
@@ -68,6 +70,179 @@ public class LyricsSong extends AppCompatActivity {
         ArrayList<ModelLyrics> modelLyrics = new ArrayList<>();
 
         ModelLyrics m = new ModelLyrics();
+        m.setTitle("Ice Cream");
+        m.setDate("2020");
+        m.setAlbum("Pre-release Single");
+        m.setLyrics("[Verse 1: Selena Gomez, Lisa & Jennie]\n" +
+                "Come a little closer 'cause you lookin' thirsty\n" +
+                "I'ma make it better, sip it like a Slurpee\n" +
+                "Snow cone chilly, get it free like Willy (Oh)\n" +
+                "In the jeans like Billie, you be poppin' like a wheelie\n" +
+                "Even in the sun, you know I keep it icy\n" +
+                "You could take a lick, but it's too cold to bite me (Hahaha)\n" +
+                "Brr, brr, frozen, you're the one been chosen\n" +
+                "Play the part like Moses, keep it fresh like roses (Oh)\n" +
+                "\n" +
+                "[Chorus: Rosé, Selena Gomez & Jennie]\n" +
+                "Look so good, yeah, look so sweet (Hey)\n" +
+                "Lookin' good, enough to eat\n" +
+                "Coldest with the kiss, so he call me ice cream\n" +
+                "Catch me in the fridge, right where the ice be\n" +
+                "Look so good, yeah, look so sweet (Hey)\n" +
+                "Baby, you deserve a treat\n" +
+                "Diamonds on my wrist, so he call me ice cream\n" +
+                "You could double-dip 'cause I know you like me\n" +
+                "\n" +
+                "[Post-Chorus: Jennie]\n" +
+                "Ice cream chillin', chillin', ice cream chillin'\n" +
+                "Ice cream chillin', chillin', ice cream chillin'\n" +
+                "\n" +
+                "[Verse 2: Selena Gomez, Rosé, Jisoo & Jennie]\n" +
+                "I know that my heart can be so cold\n" +
+                "But I'm sweet for you, come put me in a cone (In a cone)\n" +
+                "You're the only touch, yeah, they get me melting\n" +
+                "He's my favorite flavor, always gonna pick him\n" +
+                "You're the cherry piece, just stay on top of me, so\n" +
+                "I can't see nobody else for me, no\n" +
+                "Get it, flip it, scoop it, do it like that, oh yeah, oh yeah\n" +
+                "Like it, love it, lick it, do it like la-la-la, oh yeah\n" +
+                "[Chorus: Rosé, Selena Gomez & Jennie]\n" +
+                "Look so good, yeah, look so sweet (Hey)\n" +
+                "Lookin' good, enough to eat\n" +
+                "Coldest with the kiss, so he call me ice cream\n" +
+                "Catch me in the fridge, right where the ice be\n" +
+                "Look so good, yeah, look so sweet (Hey)\n" +
+                "Baby, you deserve a treat\n" +
+                "Diamonds on my wrist, so he call me ice cream\n" +
+                "You could double-dip 'cause I know you like me\n" +
+                "\n" +
+                "[Post-Chorus: Jisoo, Jisoo & Lisa]\n" +
+                "Ice cream chillin', chillin', ice cream chillin'\n" +
+                "Ice cream chillin', chillin', ice cream chillin'\n" +
+                "Ice cream chillin', chillin', ice cream chillin'\n" +
+                "Ice cream chillin', chillin', ice cream\n" +
+                "\n" +
+                "[Verse 3: Lisa]\n" +
+                "Chillin' like a villain, yeah, I ra-ra-ra\n" +
+                "Michin michindeushan sokdo in my La Ferra'\n" +
+                "Neomu ppalleo neoneun ppikkeut wonhandamyeon geunyang jireum\n" +
+                "Millis, billis, maeil beoreum hanyeoreum sonmoge eoreum\n" +
+                "Keep it movin' like my lease up\n" +
+                "Think you, fly, boy, where your visa?\n" +
+                "Mona Lisa kinda Lisa\n" +
+                "Needs an ice cream man that treats her\n" +
+                "Keep it movin' like my lease up\n" +
+                "Think you fly, boy, where your visa?\n" +
+                "Mona Lisa kinda Lisa\n" +
+                "Needs an ice cream man that treats her (Hey)\n" +
+                "[Outro: Rosé, Selena Gomez & Jennie]\n" +
+                "Na, na-na-na-na\n" +
+                "Na, na-na-na-na (Hey)\n" +
+                "Ice on my wrist, yeah, I like it like this\n" +
+                "Get the bag with the cream\n" +
+                "If you know what I mean\n" +
+                "Ice cream, ice cream, ice cream chillin'\n" +
+                "Na, na-na-na-na\n" +
+                "Na, na-na-na-na (Hey)\n" +
+                "Ice on my wrist, yeah, I like it like this\n" +
+                "And I'm nice with the cream\n" +
+                "If you know what I mean\n" +
+                "Ice cream, ice cream, ice cream");
+        m.setImage(R.drawable.img_icecream);
+        modelLyrics.add(m);
+
+        m = new ModelLyrics();
+        m.setTitle("How You Like That");
+        m.setDate("2020");
+        m.setAlbum("Pre-release Single");
+        m.setLyrics("[Intro: Lisa]\n" +
+                "BLACKPINK in your area\n" +
+                "\n" +
+                "[Verse 1: Jennie & Jisoo]\n" +
+                "Boran deusi muneojyeosseo\n" +
+                "Badageul ttulko jeo jihakkaji\n" +
+                "Ot kkeutjarak japgetdago\n" +
+                "Jeo nopi du soneul ppeodeobwado\n" +
+                "\n" +
+                "[Pre-Chorus: Rosé]\n" +
+                "Dasi kamkamhan igose light up the sky\n" +
+                "Ne du nuneul bomyeo I'll kiss you goodbye\n" +
+                "Silkeot biuseora kkoljoeunikka\n" +
+                "Ije neohui hana dul set\n" +
+                "\n" +
+                "[Chorus: Jennie, Lisa, & Jisoo]\n" +
+                "Ha, how you like that? (Woo!)\n" +
+                "You gon' like that, that-that-that, that, that-that-that, that\n" +
+                "How you like that? (Bada bing, bada boom, boom, boom)\n" +
+                "How you like that, that-that-that, that, that-that-that, that\n" +
+                "\n" +
+                "[Post-Chorus: Lisa, Rosé, Jennie]\n" +
+                "Now, look at you, now look at me (Uh)\n" +
+                "Look at you, now look at me (Uh)\n" +
+                "Look at you, now look at me\n" +
+                "How you like that?\n" +
+                "Now, look at you, now look at me (Uh)\n" +
+                "Look at you, now look at me (Uh)\n" +
+                "Look at you, now look at me\n" +
+                "How you like that?\n" +
+                "[Verse 2: Lisa]\n" +
+                "Your girl need it all and that's a hundred\n" +
+                "Baek gae junge baek nae mokseul wonhae\n" +
+                "Karma come and get some\n" +
+                "Ttakajiman eojjeol su eopjana\n" +
+                "What's up, I'm right back\n" +
+                "Bangasoereul cock back\n" +
+                "Plain Jane get hijacked, don't like me?\n" +
+                "Then tell me how you like that, like that\n" +
+                "\n" +
+                "[Pre-Chorus: Jennie & Jisoo]\n" +
+                "Deo kamkamhan igose shine like the stars\n" +
+                "Geu misoreul ttimyeo I'll kiss you goodbye\n" +
+                "Silkeot biuseora kkoljoeunikka\n" +
+                "Ije neohui hana dul set\n" +
+                "\n" +
+                "[Chorus: Rosé, Jennie, Jisoo & Lisa]\n" +
+                "Ha, how you like that? (Woo!)\n" +
+                "You gon' like that, that-that-that, that, that-that-that, that\n" +
+                "How you like that? (Bada bing, bada boom, boom, boom)\n" +
+                "How you like that, that-that-that, that, that-that-that, that\n" +
+                "\n" +
+                "[Post-Chorus: Lisa, Rosé, Jennie]\n" +
+                "Now, look at you, now look at me (Uh)\n" +
+                "Look at you, now look at me (Uh)\n" +
+                "Look at you, now look at me\n" +
+                "How you like that?\n" +
+                "Now, look at you, now look at me (Uh)\n" +
+                "Look at you, now look at me (Uh)\n" +
+                "Look at you, now look at me\n" +
+                "How you like that?\n" +
+                "[Bridge: Rosé, Jisoo, Jennie & All]\n" +
+                "Nalgae ileun chaero churakaetdeon nal\n" +
+                "Eoduun nanal soge gatyeo itdeon nal\n" +
+                "Geuttaejjeume neon nal kkeunnaeya haesseo\n" +
+                "Look up in the sky\n" +
+                "It's a bird, it's a plane\n" +
+                "Yeah-eah-eah-eah\n" +
+                "Bring out your boss bitch\n" +
+                "Yeah-eah-eah-eah\n" +
+                "BLACKPINK!\n" +
+                "\n" +
+                "[Outro: All, Rosé & Jennie]\n" +
+                "Ddu, ddu, ddu, ddu-ddu-ddu\n" +
+                "Ddu, ddu, ddu, ddu-ddu-ddu\n" +
+                "How you like that?\n" +
+                "Ddu, ddu, ddu, ddu-ddu-ddu\n" +
+                "Ddu, ddu, ddu, du-du-du-ddu\n" +
+                "You gon' like that\n" +
+                "Ddu, ddu, ddu, ddu-ddu-ddu\n" +
+                "Ddu, ddu, ddu, ddu-ddu-ddu\n" +
+                "How you like that?\n" +
+                "Ddu, ddu, ddu, ddu-ddu-ddu\n" +
+                "Ddu, ddu, ddu, du-du-du-ddu");
+        m.setImage(R.drawable.howyoulikethat);
+        modelLyrics.add(m);
+
+        m = new ModelLyrics();
         m.setTitle("Kill This Love");
         m.setDate("2019");
         m.setAlbum("Kill This Love");
@@ -326,7 +501,7 @@ public class LyricsSong extends AppCompatActivity {
         modelLyrics.add(m);
 
         m = new ModelLyrics();
-        m.setTitle("아니길\nHope Not");
+        m.setTitle("Hope Not");
         m.setDate("2019");
         m.setAlbum("Kill This Love");
         m.setLyrics("[Verse 1: Jennie, Lisa]\n" +
@@ -385,7 +560,7 @@ public class LyricsSong extends AppCompatActivity {
         modelLyrics.add(m);
 
         m = new ModelLyrics();
-        m.setTitle("뚜두뚜두\nDDU-DU DDU-DU");
+        m.setTitle("DDU-DU DDU-DU");
         m.setDate("2018");
         m.setAlbum("Square Up");
         m.setLyrics("[Intro: All, Rosé]\n" +
@@ -465,7 +640,7 @@ public class LyricsSong extends AppCompatActivity {
                 "\n" +
                 "[Outro: Jennie]\n" +
                 "Hit you with that ddu-du ddu-du du");
-        m.setImage(R.drawable.img_squareone);
+        m.setImage(R.drawable.img_sqareup);
         modelLyrics.add(m);
 
         m = new ModelLyrics();
@@ -565,7 +740,7 @@ public class LyricsSong extends AppCompatActivity {
                 "Whatta bum bum whatta bum bum\n" +
                 "Whatta bum bum whatta bum bum\n" +
                 "Whatta bum bum whatta bum bum");
-        m.setImage(R.drawable.img_squaretwo);
+        m.setImage(R.drawable.img_sqareup);
         modelLyrics.add(m);
 
         m = new ModelLyrics();
@@ -657,7 +832,7 @@ public class LyricsSong extends AppCompatActivity {
                 "See u later boy see u later later\n" +
                 "See u later boy see u later\n" +
                 "See u later maybe never");
-        m.setImage(R.drawable.img_squareone);
+        m.setImage(R.drawable.img_sqareup);
         modelLyrics.add(m);
 
         m = new ModelLyrics();
@@ -733,7 +908,7 @@ public class LyricsSong extends AppCompatActivity {
                 "Really really really\n" +
                 "I gotta know that you’re for real\n" +
                 "Really really really");
-        m.setImage(R.drawable.img_squareone);
+        m.setImage(R.drawable.img_sqareup);
         modelLyrics.add(m);
 
         m = new ModelLyrics();
@@ -833,7 +1008,7 @@ public class LyricsSong extends AppCompatActivity {
         modelLyrics.add(m);
 
         m = new ModelLyrics();
-        m.setTitle("붐바야\nBoombayah");
+        m.setTitle("Boombayah");
         m.setDate("2016");
         m.setAlbum("Square One");
         m.setLyrics("[Intro: Jennie]\n" +
@@ -937,7 +1112,7 @@ public class LyricsSong extends AppCompatActivity {
         modelLyrics.add(m);
 
         m = new ModelLyrics();
-        m.setTitle("휘파람\nWhistle");
+        m.setTitle("Whistle");
         m.setDate("2016");
         m.setAlbum("Square One");
         m.setLyrics("[Intro]\n" +
@@ -1038,6 +1213,96 @@ public class LyricsSong extends AppCompatActivity {
                 "Make’ em whistle like a missile bomb, bomb\n" +
                 "Every time I show up, blow up, uh\n" +
                 "Make’ em whistle like a missile bomb, bomb\n" +
+                "Every time I show up, blow up, uh\n\n"+
+
+        "[Spoken: Jisoo]\n" +
+                "Hey, boy\n" +
+                "\n" +
+                "[Intro: Lisa]\n" +
+                "Make 'em whistle like a missile, bomb, bomb\n" +
+                "Every time I show up, blow up, uh\n" +
+                "Make 'em whistle like a missile, bomb, bomb\n" +
+                "Every time I show up, blow up, uh\n" +
+                "\n" +
+                "[Verse 1: Rosé & Lisa]\n" +
+                "Suteki anata wa wasureru wake nai\n" +
+                "Hitomi ni kokoro ga tokidoki suru wa, boom, boom\n" +
+                "24/365 anata ga koishi wa\n" +
+                "Yuru mo yoru ni mo zutto mo tometeru, hmm, hmm\n" +
+                "\n" +
+                "[Verse 2: Jennie]\n" +
+                "Yeah, all the boys stand in line just to check out\n" +
+                "Forget about the bet, I'ma blow their breath out\n" +
+                "Got my mind on my money and my money on my mind (Uh)\n" +
+                "Dough, it ain't really work if ya broke\n" +
+                "See me skrrt, skrrt with it, watch you go go get it\n" +
+                "So hot, so hot when the sauce get to dripping, I lick (Uh)\n" +
+                "Got them begging, \"Give me some more\"\n" +
+                "Baby put them lips together make that whistle blow\n" +
+                "\n" +
+                "[Pre-Chorus: Rosé & Jisoo]\n" +
+                "Ikanai de sono mama\n" +
+                "Anata mo onaji komochi nara, whoa-oh-oh\n" +
+                "Omoi kokarete fire\n" +
+                "Kokoro ga deku natteru wa dandan kikoete kuru wa\n" +
+                "[Chorus: Jisoo; Jennie & Lisa]\n" +
+                "Hwiparam (Uh)\n" +
+                "Hwi param param\n" +
+                "(Can you hear that?)\n" +
+                "Hwi parapara para bam\n" +
+                "Hwiparam (Uh)\n" +
+                "Hwi param param\n" +
+                "(Can you hear that?)\n" +
+                "Hwi parapara para bam\n" +
+                "\n" +
+                "[Verse 3: Jennie & Jisoo]\n" +
+                "Hold up\n" +
+                "Shabera naide\n" +
+                "Just whistle to my heart\n" +
+                "Hontou ga kikoeru dokidoki suru wa, boom, boom\n" +
+                "Kangae sukizu\n" +
+                "Kanjite Shh!\n" +
+                "Every day, all day\n" +
+                "Soba ni ite zutto, zoom, zoom\n" +
+                "\n" +
+                "[Verse 4: Lisa]\n" +
+                "Uh, every day I'm stylin'\n" +
+                "Killin' everything in my way, I'm wildin'\n" +
+                "Aiming for your heart, I'm gonna see you, darlin'\n" +
+                "Smooth criminal, I'm bad, untouchable\n" +
+                "I be feeling myself when you looking my way\n" +
+                "Watch your queen, checkmate for the win (Uh-huh)\n" +
+                "Pull up on deck, BLACKPINK, write the check, boy\n" +
+                "Let me hear you whistle again, uh\n" +
+                "[Pre-Chorus: Jisoo & Rosé]\n" +
+                "Ikanai de sono mama\n" +
+                "Anata mo onaji kimochi nara, whoa-oh-oh\n" +
+                "Omoi kokarete Fire\n" +
+                "Kokoro ga deku natteru wa dandan kikoete kuru wa\n" +
+                "\n" +
+                "[Chorus: Rosé; Jennie; Lisa & Jisoo]\n" +
+                "Hwiparam (Uh)\n" +
+                "Hwi param param\n" +
+                "(Can you hear that?)\n" +
+                "Hwi parapara para bam\n" +
+                "Hwiparam (Uh)\n" +
+                "Hwi param param\n" +
+                "(Can you hear that?)\n" +
+                "Hwi parapara para bam\n" +
+                "\n" +
+                "[Spoken: Rosé]\n" +
+                "This beat got me feelin' like\n" +
+                "\n" +
+                "[Bridge: Jennie, Jisoo & Rosé]\n" +
+                "Deai ga sugisaru kaze de wa nai yō ni\n" +
+                "Kotoba wa ira nai\n" +
+                "Ima wa soba ni itai dake yo\n" +
+                "Ooh-ooh-ooh, ooh-ooh-ooh, ooh\n" +
+                "\n" +
+                "[Outro: Lisa]\n" +
+                "Make 'em whistle like a missile, bomb, bomb\n" +
+                "Every time I show up, blow up, uh\n" +
+                "Make 'em whistle like a missile, bomb, bomb\n" +
                 "Every time I show up, blow up, uh");
         m.setImage(R.drawable.img_squareone);
         modelLyrics.add(m);
@@ -1184,7 +1449,7 @@ public class LyricsSong extends AppCompatActivity {
         modelLyrics.add(m);
 
         m = new ModelLyrics();
-        m.setTitle("Sure Thing\n(Miguel Cover)");
+        m.setTitle("Sure Thing (Miguel Cover)");
         m.setDate("2017");
         m.setAlbum("Cover");
         m.setLyrics("[Intro: Jennie]\n" +
@@ -1274,7 +1539,7 @@ public class LyricsSong extends AppCompatActivity {
         modelLyrics.add(m);
 
         m = new ModelLyrics();
-        m.setTitle("So Hot\n(THEBLACKLABEL Remix)");
+        m.setTitle("So Hot (THEBLACKLABEL Remix)");
         m.setDate("2017");
         m.setAlbum("THEBLACKLABEL Remix");
         m.setLyrics("[Intro: Jennie]\n" +
